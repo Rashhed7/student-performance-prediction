@@ -1,0 +1,26 @@
+<div class="navbar">
+    <a href="/logout">Logout</a>
+</div>
+
+<div class="container">
+    <h2>📊 Dashboard</h2>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <h3>Single Student Prediction</h3>
+    <form action="/predict" method="post">
+        <input name="name" placeholder="Student Name">
+        <input name="studytime" placeholder="Study Time">
+        <input name="failures" placeholder="Failures">
+        <input name="absences" placeholder="Absences">
+        <input name="G1" placeholder="G1 Score">
+        <input name="G2" placeholder="G2 Score">
+        <button>Predict</button>
+    </form>
+
+    <hr>
+
+    <h3>Upload CSV</h3>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button>Upload</button>
+    </form>
+</div>

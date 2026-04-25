@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        /* Center the container */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 350px;
+            text-align: center;
+        }
+
+        /* Fix input alignment */
+        input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #1e3c72;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ✅ Project Title -->
+    <h1>📊 Student Performance Predictor</h1>
+
+    <h2>🔐 Login</h2>
+
+    <form method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button>Login</button>
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>📈 Result</h2>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <div class="result-box">
+        <p><b>Name:</b> {{ name }}</p>
+        <p class="{{ 'pass' if 'Pass' in prediction else 'risk' }}">
+            {{ prediction }}
+        </p>
+        <p><b>Confidence:</b> {{ probability }}%</p>
+    </div>
+
+    <img src="{{ chart }}" width="400">
+
+    <a href="/dashboard">⬅ Back</a>
+</div>

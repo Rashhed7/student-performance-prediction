@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload CSV</title>
+
+    <!-- ✅ ADD CSS HERE -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="/dashboard">Dashboard</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<div class="container">
+
+    <h2>📂 Upload Student CSV</h2>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button>Upload & Predict</button>
+    </form>
+
+    {% if table %}
+        <h3>📊 Results</h3>
+        <div>
+            {{ table|safe }}
+        </div>
+
+        <h3>📈 Performance Chart</h3>
+        <img src="{{ chart }}" width="400">
+
+        <br><br>
+        <a href="/download">⬇ Download CSV</a>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

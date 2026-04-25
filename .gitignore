@@ -1,0 +1,8 @@
+venv/
+myenv/
+__pycache__/
+*.pkl
+*.joblib
+*.h5
+*.pth
+*.csv
